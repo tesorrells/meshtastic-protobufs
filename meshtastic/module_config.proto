@@ -718,6 +718,16 @@ message ModuleConfig {
   }
 
   /*
+   * Tactical Message Module Config
+   */
+  message TacticalMessageConfig {
+    /*
+     * Whether the Module is enabled
+     */
+    bool enabled = 1;
+  }
+
+  /*
      Ambient Lighting Module - Settings for control of onboard LEDs to allow users to adjust the brightness levels and respective color levels.
      Initially created for the RAK14001 RGB LED module.
   */
@@ -816,6 +826,11 @@ message ModuleConfig {
      * TODO: REPLACE
      */
     PaxcounterConfig paxcounter = 13;
+
+    /*
+     * TODO: REPLACE
+     */
+    TacticalMessageConfig tactical_message = 14;
   }
 }
 

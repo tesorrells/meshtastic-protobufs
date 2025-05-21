@@ -16,6 +16,12 @@ option swift_prefix = "";
  * This is never sent over the wire, only for local use
  */
 
+// Definition for TacticalMessageConfig
+// message TacticalMessageConfig {
+//   bool enabled = 1;
+//   // string some_other_setting = 2; // Example for future expansion
+// }
+
 message LocalConfig {
   /*
    * The part of the config that is specific to the Device
@@ -130,6 +136,11 @@ message LocalModuleConfig {
    * Paxcounter Config
    */
   ModuleConfig.PaxcounterConfig paxcounter = 14;
+
+  /*
+   * Tactical Message Config
+   */
+  ModuleConfig.TacticalMessageConfig tactical_message = 15;
 
   /*
    * A version integer used to invalidate old save files when we make
